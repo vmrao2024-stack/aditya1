@@ -557,14 +557,18 @@
         </div>
     </header>
 
-    <!-- Hero Area with Scroll Animations & Floating Graphic Blocks -->
+    <!-- Hero Area with Animated Flow Sequence -->
     <section class="hero-section section-padding">
         <div class="container hero">
+            <!-- Title flies from Left -->
             <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
                 <h2>Executive Search & Leadership Advisory</h2>
                 <h1 style="margin-top:10px;">Identifying leaders who transform businesses</h1>
-                <p>Accelerate growth and create lasting impact with executives built to lead in high-performance environments.</p>
-                <a href="#contact" class="btn">Let's Discuss Leadership Hiring</a>
+                <!-- Content stays hidden/blank then triggers with delay -->
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <p>Accelerate growth and create lasting impact with executives built to lead in high-performance environments.</p>
+                    <a href="#contact" class="btn">Let's Discuss Leadership Hiring</a>
+                </div>
             </div>
             <div class="image-graphic-wrap" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                 <div class="graphic-blob blob-1"></div>
@@ -582,11 +586,17 @@
                     <div class="graphic-blob blob-2" style="top:-20px; left:-20px;"></div>
                     <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Executive Search Interview">
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
-                    <h2>About Us</h2>
-                    <h3 style="margin: 10px 0 20px; font-weight: 500;">Trusted Advisors in Executive Search</h3>
-                    <p style="margin-bottom: 15px;">At Aditya Consulting, we specialize in executive search for organizations seeking transformational leaders. Our approach combines market intelligence, industry expertise, and confidential headhunting to identify executives who align with your business strategy and culture.</p>
-                    <p>From emerging startups to established enterprises, we help organizations build leadership teams capable of driving innovation, operational excellence, and sustainable growth.</p>
+                <div>
+                    <!-- Title flies from Left -->
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <h2>About Us</h2>
+                        <h3 style="margin: 10px 0 20px; font-weight: 500;">Trusted Advisors in Executive Search</h3>
+                    </div>
+                    <!-- Content stays blank then loads -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <p style="margin-bottom: 15px;">At Aditya Consulting, we specialize in executive search for organizations seeking transformational leaders. Our approach combines market intelligence, industry expertise, and confidential headhunting to identify executives who align with your business strategy and culture.</p>
+                        <p>From emerging startups to established enterprises, we help organizations build leadership teams capable of driving innovation, operational excellence, and sustainable growth.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -595,29 +605,33 @@
     <!-- Services Core Offerings -->
     <section id="services" class="section-padding">
         <div class="container">
-            <h2 class="text-center" data-aos="fade-up" data-aos-duration="800">Our Offerings & Solutions</h2>
-            <div class="grid-3">
-                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+            <!-- Title flies from Left -->
+            <div data-aos="fade-right" data-aos-duration="900">
+                <h2 class="text-center">Our Offerings & Solutions</h2>
+            </div>
+            <!-- Content Grid starts blank then reveals -->
+            <div class="grid-3" data-aos="fade-up" data-aos-duration="900" data-aos-delay="450">
+                <div class="card">
                     <h3>Executive Search</h3>
                     <p>Confidential search assignments for C-suite, VP, Director, and senior leadership positions.</p>
                 </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                <div class="card">
                     <h3>Leadership Hiring</h3>
                     <p>Building leadership teams across Technology, Product, Sales, Marketing, Finance, Operations, HR, and Legal.</p>
                 </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+                <div class="card">
                     <h3>Board & Advisory Search</h3>
                     <p>Identifying Independent Directors, Board Members, and Strategic Advisors who strengthen governance and long-term business performance.</p>
                 </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+                <div class="card">
                     <h3>Succession Planning</h3>
                     <p>Helping organizations develop robust leadership pipelines for future growth.</p>
                 </div>
-                <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                <div class="card">
                     <h3>Market Mapping & Talent Intelligence</h3>
                     <p>Providing competitive market insights, leadership benchmarking, and executive talent mapping to support informed hiring decisions.</p>
                 </div>
-                <div class="card card-dark" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+                <div class="card card-dark">
                     <h3>Our Philosophy</h3>
                     <p>Exceptional leaders are rarely active job seekers. Our executive search methodology focuses on identifying, engaging, and assessing high-impact executives through research, market intelligence, and trusted industry relationships—not job boards.</p>
                 </div>
@@ -628,15 +642,19 @@
     <!-- Leadership & Functional Matrix -->
     <section class="section-padding">
         <div class="container split-layout">
-            <div data-aos="fade-right" data-aos-duration="1000">
-                <h2>Leadership Functions We Recruit</h2>
-                <p style="margin-top: 10px; color: var(--text-light)">We secure domain experts globally to helm modern functions across agile modern operations.</p>
-                <div style="margin-top:25px;" class="image-graphic-wrap">
+            <div>
+                <!-- Title flies from Left -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h2>Leadership Functions We Recruit</h2>
+                    <p style="margin-top: 10px; color: var(--text-light)">We secure domain experts globally to helm modern functions across agile modern operations.</p>
+                </div>
+                <div style="margin-top:25px;" class="image-graphic-wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                      <div class="graphic-blob blob-1" style="width:180px; height:180px;"></div>
                      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Leadership Consulting Strategy">
                 </div>
             </div>
-            <div class="grid-3" style="margin-top: 0; grid-template-columns: 1fr 1fr;" data-aos="zoom-in-up" data-aos-duration="1000">
+            <!-- Matrix content grid loads following it -->
+            <div class="grid-3" style="margin-top: 0; grid-template-columns: 1fr 1fr;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <div class="function-box">
                     <h3>Technology Leadership</h3>
                     <ul>
@@ -686,9 +704,13 @@
     <!-- Industries Served -->
     <section class="section-padding text-center">
         <div class="container">
-            <h2 data-aos="fade-up" data-aos-duration="800">Industries We Serve</h2>
-            <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light)" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">We deliver executive search solutions across industries where leadership drives competitive advantage.</p>
-            <div class="industry-tags" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <!-- Title flies from Left -->
+            <div data-aos="fade-right" data-aos-duration="800">
+                <h2>Industries We Serve</h2>
+                <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light)">We deliver executive search solutions across industries where leadership drives competitive advantage.</p>
+            </div>
+            <!-- Dynamic list fades up -->
+            <div class="industry-tags" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                 <div class="tag">Technology & SaaS</div>
                 <div class="tag">Artificial Intelligence & Data</div>
                 <div class="tag">Global Capability Centers (GCC)</div>
@@ -707,34 +729,38 @@
     <!-- Process Workflow Section -->
     <section id="process" class="section-padding">
         <div class="container">
-            <h2 class="text-center" data-aos="fade-up" data-aos-duration="800">Our Executive Search Process</h2>
-            <div class="process-grid">
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50">
+            <!-- Title flies from Left -->
+            <div data-aos="fade-right" data-aos-duration="800">
+                <h2 class="text-center">Our Executive Search Process</h2>
+            </div>
+            <!-- Workflow content sequence drops down sequentially -->
+            <div class="process-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="process-step">
                     <div class="step-num">1</div>
                     <h3>Discover</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Understanding your business strategy, organizational culture, leadership objectives, and success profile.</p>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="150">
+                <div class="process-step">
                     <div class="step-num">2</div>
                     <h3>Research</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Comprehensive market mapping, competitor analysis, and identification of leadership talent across relevant industries.</p>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">
+                <div class="process-step">
                     <div class="step-num">3</div>
                     <h3>Engage</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Confidential outreach to both active and passive executives through our extensive leadership network.</p>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="350">
+                <div class="process-step">
                     <div class="step-num">4</div>
                     <h3>Assess</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Structured leadership interviews, competency evaluation, behavioural assessment, and reference validation.</p>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="450">
+                <div class="process-step">
                     <div class="step-num">5</div>
                     <h3>Present</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">A carefully curated shortlist of highly qualified candidates supported by market insights and evaluation reports.</p>
                 </div>
-                <div class="process-step" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550">
+                <div class="process-step">
                     <div class="step-num">6</div>
                     <h3>Secure</h3>
                     <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Offer strategy, executive negotiations, onboarding support, and post-placement follow-up.</p>
@@ -743,17 +769,21 @@
         </div>
     </section>
 
-    <!-- Track Record / Executive Mandates Panel (Enhanced Dark Matrix Overlay) -->
+    <!-- Track Record Panel -->
     <section class="section-padding dark-metrics-panel">
         <div class="graphic-blob blob-1" style="top: -20px; right: -20px; width: 400px; height: 400px;"></div>
         <div class="container split-layout">
             <div class="image-graphic-wrap" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="https://images.unsplash.com/photo-1580894732444-8fecef2271ff?auto=format&fit=crop&w=600&q=80" alt="Executive Search Success Track Record">
             </div>
-            <div data-aos="fade-left" data-aos-duration="1000">
-                <h2 style="color: var(--white)">Recent Leadership Searches</h2>
-                <p style="color: #94a3b8; margin-top: 10px;">Executive Mandates successfully tracked across Global Matrix Operations:</p>
-                <div class="mandates-list">
+            <div>
+                <!-- Title flies from Left -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h2 style="color: var(--white)">Recent Leadership Searches</h2>
+                    <p style="color: #94a3b8; margin-top: 10px;">Executive Mandates successfully tracked across Global Matrix Operations:</p>
+                </div>
+                <!-- Interactive list updates securely -->
+                <div class="mandates-list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                     <div class="mandate-item">Chief Technology Officer - AI Platform</div>
                     <div class="mandate-item">VP Engineering - Global Capability Center</div>
                     <div class="mandate-item">Chief Financial Officer - Manufacturing Group</div>
@@ -770,14 +800,18 @@
     <!-- Competitive Edge / Partnerships Section -->
     <section class="section-padding text-center">
         <div class="container">
-            <h2 data-aos="fade-up" data-aos-duration="800">Why Leading Organizations Partner With Us</h2>
-            <div class="grid-3">
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="50"><h4>Partner-led Executive Search</h4></div>
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="150"><h4>Confidential & Discreet Engagements</h4></div>
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="250"><h4>Access to Passive Leadership Talent</h4></div>
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="50"><h4>Technology & Digital Leadership Specialists</h4></div>
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="150"><h4>Cross-Industry Executive Network</h4></div>
-                <div class="card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="250"><h4>Research-Driven Talent Mapping</h4></div>
+            <!-- Title flies from Left -->
+            <div data-aos="fade-right" data-aos-duration="800">
+                <h2>Why Leading Organizations Partner With Us</h2>
+            </div>
+            <!-- Matrix blocks load with stagger entry -->
+            <div class="grid-3" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+                <div class="card"><h4>Partner-led Executive Search</h4></div>
+                <div class="card"><h4>Confidential & Discreet Engagements</h4></div>
+                <div class="card"><h4>Access to Passive Leadership Talent</h4></div>
+                <div class="card"><h4>Technology & Digital Leadership Specialists</h4></div>
+                <div class="card"><h4>Cross-Industry Executive Network</h4></div>
+                <div class="card"><h4>Research-Driven Talent Mapping</h4></div>
             </div>
         </div>
     </section>
@@ -794,15 +828,20 @@
     <!-- Contact & Hub Information Section -->
     <section id="contact" class="contact-section section-padding">
         <div class="container contact-grid">
-            <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
-                <h2>Contact Us</h2>
-                <h3 style="font-weight: 500; margin-top: 10px;">Better Yet, Connect With Your Recruitment Partner!</h3>
-                <p>We value our clients and partnerships. Whether you're seeking a tech recruitment agency, leadership hiring support, or niche GTM talent, our team is here to help—connect with us during business hours or reach out online anytime.</p>
-                
-                <div class="contact-details">
-                    <div><i class="fa-solid fa-location-dot"></i> <span>Aditya Consulting, Lucknow, India</span></div>
-                    <div><i class="fa-solid fa-phone"></i> <span>+91.9810844079</span></div>
-                    <div><i class="fa-solid fa-clock"></i> <span>Hours: Today Closed</span></div>
+            <div>
+                <!-- Title flies from Left -->
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <h2>Contact Us</h2>
+                    <h3 style="font-weight: 500; margin-top: 10px;">Better Yet, Connect With Your Recruitment Partner!</h3>
+                </div>
+                <!-- Info cards load down -->
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
+                    <p>We value our clients and partnerships. Whether you're seeking a tech recruitment agency, leadership hiring support, or niche GTM talent, our team is here to help—connect with us during business hours or reach out online anytime.</p>
+                    <div class="contact-details">
+                        <div><i class="fa-solid fa-location-dot"></i> <span>Aditya Consulting, Lucknow, India</span></div>
+                        <div><i class="fa-solid fa-phone"></i> <span>+91.9810844079</span></div>
+                        <div><i class="fa-solid fa-clock"></i> <span>Hours: Today Closed</span></div>
+                    </div>
                 </div>
             </div>
             <div class="contact-card-glass" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
@@ -843,20 +882,20 @@
     <!-- AOS (Animate On Scroll) Library JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Initialize Animate On Scroll (AOS)
+        // Initialize Animate On Scroll (AOS) Engine
         AOS.init({
-            once: true, // Animations play once as you scroll down
+            once: true, 
             mirror: false
         });
 
-        // Initialize Particles.js Engine with subtle orange nodes
+        // Initialize Particles.js Engine
         particlesJS('particles-js', {
             "particles": {
                 "number": {
                     "value": 40,
                     "density": { "enable": true, "value_area": 1000 }
                 },
-                "color": { "value": "#f59e0b" }, // brand orange nodes
+                "color": { "value": "#f59e0b" }, 
                 "shape": { "type": "circle" },
                 "opacity": {
                     "value": 0.25,
