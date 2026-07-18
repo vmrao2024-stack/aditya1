@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Consulting | Executive Search & Leadership Advisory</title>
+    <!-- FontAwesome for professional social and contact icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            /* Toned color palette reflecting the vibrant orange logo */
+            --primary: #1e293b;       /* Dark Slate Navy - Strong grounding color for professional trust */
+            --brand-orange: #f59e0b;   /* Primary Sunburst Orange from the logo */
+            --brand-dark-orange: #d97706; /* Richer accent tone for button hovers */
+            --brand-light-orange: #fffbeb; /* Soft cream/orange tint for background cards */
+            --text-dark: #334155;     /* Slate 700 for comfortable readability */
+            --text-light: #64748b;    /* Slate 500 */
+            --bg-light: #f8fafc;      /* Clean background slate neutral */
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Container & Typography utils */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center { text-align: center; }
+        
+        /* Buttons matched to your logo */
+        .btn {
+            display: inline-block;
+            background-color: var(--brand-orange);
+            color: var(--primary); /* Dark text on orange provides excellent readability */
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: var(--brand-dark-orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: var(--white);
+        }
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+        }
+
+        /* Header / Navbar */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+        
+        /* Premium Corporate Logo Block styled to complement the image */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        .logo-image {
+            height: 60px; /* Increased padding size to let the sunburst design breath */
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+        .logo-fallback-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--brand-orange);
+            text-transform: lowercase; /* Matches the lowercase aesthetic of the logo font */
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--brand-orange); }
+
+        /* Top Bar Banner */
+        .top-banner {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 2px solid var(--brand-orange);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--white) 0%, var(--brand-light-orange) 100%);
+        }
+        .hero-text h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+        .hero-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--white);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Services Grid Layout */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-orange);
+        }
+        .card h3 { margin-bottom: 15px; font-size: 20px;}
+
+        /* Functional & Industry Lists styling */
+        .function-box {
+            background: var(--brand-light-orange);
+            border: 1px solid #fde68a;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .function-box h3 {
+            color: var(--brand-dark-orange);
+        }
+        .function-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .function-box li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .function-box li::before {
+            content: "✦";
+            color: var(--brand-orange);
+            position: absolute;
+            left: 0;
+        }
+
+        .industry-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .tag {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--primary);
+            transition: all 0.3s;
+        }
+        .tag:hover {
+            border-color: var(--brand-orange);
+            color: var(--brand-dark-orange);
+            background-color: var(--brand-light-orange);
+        }
+
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .process-step {
+            text-align: center;
+            background: var(--white);
+            padding: 25px 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .step-num {
+            width: 35px;
+            height: 35px;
+            background: var(--brand-orange);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-weight: bold;
+        }
+
+        /* Two Column Splits for Process & Mandates */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        /* Matrix / Mandates lists */
+        .mandates-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .mandate-item {
+            background: var(--white);
+            padding: 15px;
+            border-left: 4px solid var(--brand-orange);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        .contact-info h3 { margin-bottom: 15px; }
+        .contact-info p { margin-bottom: 25px; }
+        .contact-details div {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .contact-details i {
+            color: var(--brand-dark-orange);
+            font-size: 20px;
+            width: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+        }
+        .footer-logo img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(1.1); 
+        }
+        .footer-socials a {
+            color: #94a3b8;
+            font-size: 20px;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        .footer-socials a:hover { color: var(--brand-orange); }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 968px) {
+            .hero, .about-grid, .split-layout, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .hero-text h1 { font-size: 36px; }
+            .mandates-list { grid-template-columns: 1fr; }
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 0;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Top Banner -->
+    <div class="top-banner">
+        Scaling Global Teams Across India, Europe & APAC. We place top talent.
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container navbar">
+            <!-- Dedicated Safe Space for your Sunburst Orange Logo Link -->
+            <a href="#" class="logo-container">
+                <!-- Change "logo-asset.png" to match your file name when uploading -->
+                <img src="logo-asset.png" alt="aditya consulting" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo-fallback-text" style="display: none;">aditya consulting</div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Area -->
+    <section class="hero container">
+        <div class="hero-text">
+            <h2>Executive Search & Leadership Advisory</h2>
+            <h1 style="margin-top:10px;">Identifying leaders who transform businesses</h1>
+            <p>Accelerate growth and create lasting impact with executives built to lead in high-performance environments.</p>
+            <a href="#contact" class="btn">Let's Discuss Leadership Hiring</a>
+        </div>
+        <div class="hero-img">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Leadership Advisory Board Meeting">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Executive Search Interview">
+                </div>
+                <div>
+                    <h2>About Us</h2>
+                    <h3 style="margin: 10px 0 20px; font-weight: 500;">Trusted Advisors in Executive Search</h3>
+                    <p style="margin-bottom: 15px;">At Aditya Consulting, we specialize in executive search for organizations seeking transformational leaders. Our approach combines market intelligence, industry expertise, and confidential headhunting to identify executives who align with your business strategy and culture.</p>
+                    <p>From emerging startups to established enterprises, we help organizations build leadership teams capable of driving innovation, operational excellence, and sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Core Offerings -->
+    <section id="services" class="section-padding" style="background-color: var(--bg-light)">
+        <div class="container">
+            <h2 class="text-center">Our Offerings & Solutions</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Executive Search</h3>
+                    <p>Confidential search assignments for C-suite, VP, Director, and senior leadership positions.</p>
+                </div>
+                <div class="card">
+                    <h3>Leadership Hiring</h3>
+                    <p>Building leadership teams across Technology, Product, Sales, Marketing, Finance, Operations, HR, and Legal.</p>
+                </div>
+                <div class="card">
+                    <h3>Board & Advisory Search</h3>
+                    <p>Identifying Independent Directors, Board Members, and Strategic Advisors who strengthen governance and long-term business performance.</p>
+                </div>
+                <div class="card">
+                    <h3>Succession Planning</h3>
+                    <p>Helping organizations develop robust leadership pipelines for future growth.</p>
+                </div>
+                <div class="card">
+                    <h3>Market Mapping & Talent Intelligence</h3>
+                    <p>Providing competitive market insights, leadership benchmarking, and executive talent mapping to support informed hiring decisions.</p>
+                </div>
+                <div class="card" style="background: var(--primary); color: var(--white);">
+                    <h3 style="color: var(--white)">Our Philosophy</h3>
+                    <p style="color: #cbd5e1">Exceptional leaders are rarely active job seekers. Our executive search methodology focuses on identifying, engaging, and assessing high-impact executives through research, market intelligence, and trusted industry relationships—not job boards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Functional Matrix -->
+    <section class="section-padding">
+        <div class="container split-layout">
+            <div>
+                <h2>Leadership Functions We Recruit</h2>
+                <p style="margin-top: 10px; color: var(--text-light)">We secure domain experts globally to helm modern functions across agile modern operations.</p>
+                <div style="margin-top:25px;" class="hero-img">
+                     <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Leadership Consulting Strategy">
+                </div>
+            </div>
+            <div class="grid-3" style="margin-top: 0; grid-template-columns: 1fr 1fr;">
+                <div class="function-box">
+                    <h3>Technology Leadership</h3>
+                    <ul>
+                        <li>CTO | CIO</li>
+                        <li>VP Engineering</li>
+                        <li>Engineering Director</li>
+                        <li>Head of AI | Head of Data</li>
+                        <li>Head of Cybersecurity</li>
+                        <li>Enterprise Architects</li>
+                    </ul>
+                </div>
+                <div class="function-box">
+                    <h3>Product & Digital</h3>
+                    <ul>
+                        <li>Chief Product Officer</li>
+                        <li>VP Product</li>
+                        <li>Product Directors</li>
+                        <li>UX Leadership</li>
+                        <li>Digital Transformation Leaders</li>
+                    </ul>
+                </div>
+                <div class="function-box">
+                    <h3>Commercial</h3>
+                    <ul>
+                        <li>Chief Revenue Officer</li>
+                        <li>VP Sales</li>
+                        <li>Sales Directors</li>
+                        <li>Marketing Leaders</li>
+                        <li>Customer Success Heads</li>
+                        <li>Partnerships Leaders</li>
+                    </ul>
+                </div>
+                <div class="function-box">
+                    <h3>Corporate Core</h3>
+                    <ul>
+                        <li>CEO | COO | CFO</li>
+                        <li>CHRO | General Counsel</li>
+                        <li>Business Unit Heads</li>
+                        <li>Plant Directors</li>
+                        <li>Supply Chain Leaders</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served -->
+    <section class="section-padding text-center" style="background-color: var(--bg-light)">
+        <div class="container">
+            <h2>Industries We Serve</h2>
+            <p style="max-width: 600px; margin: 15px auto 0; color: var(--text-light)">We deliver executive search solutions across industries where leadership drives competitive advantage.</p>
+            <div class="industry-tags">
+                <div class="tag">Technology & SaaS</div>
+                <div class="tag">Artificial Intelligence & Data</div>
+                <div class="tag">Global Capability Centers (GCC)</div>
+                <div class="tag">Financial Services & FinTech</div>
+                <div class="tag">Manufacturing & Industrial</div>
+                <div class="tag">Healthcare & Life Sciences</div>
+                <div class="tag">Consumer & Retail</div>
+                <div class="tag">Logistics & Supply Chain</div>
+                <div class="tag">Digital & Media</div>
+                <div class="tag">Private Equity Portfolio Companies</div>
+                <div class="tag">High-Growth Startups</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Workflow Section -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Our Executive Search Process</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">1</div>
+                    <h3>Discover</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Understanding your business strategy, organizational culture, leadership objectives, and success profile.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">2</div>
+                    <h3>Research</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Comprehensive market mapping, competitor analysis, and identification of leadership talent across relevant industries.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">3</div>
+                    <h3>Engage</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Confidential outreach to both active and passive executives through our extensive leadership network.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">4</div>
+                    <h3>Assess</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Structured leadership interviews, competency evaluation, behavioural assessment, and reference validation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">5</div>
+                    <h3>Present</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">A carefully curated shortlist of highly qualified candidates supported by market insights and evaluation reports.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">6</div>
+                    <h3>Secure</h3>
+                    <p style="font-size: 14px; margin-top: 10px; color: var(--text-light)">Offer strategy, executive negotiations, onboarding support, and post-placement follow-up.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Record / Executive Mandates -->
+    <section class="section-padding" style="background-color: var(--primary); color: var(--white)">
+        <div class="container split-layout">
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1580894732444-8fecef2271ff?auto=format&fit=crop&w=600&q=80" alt="Executive Search Success Track Record">
+            </div>
+            <div>
+                <h2 style="color: var(--white)">Recent Leadership Searches</h2>
+                <p style="color: #94a3b8; margin-top: 10px;">Executive Mandates successfully tracked across Global Matrix Operations:</p>
+                <div class="mandates-list" style="color: var(--primary)">
+                    <div class="mandate-item">Chief Technology Officer - AI Platform</div>
+                    <div class="mandate-item">VP Engineering - Global Capability Center</div>
+                    <div class="mandate-item">Chief Financial Officer - Manufacturing Group</div>
+                    <div class="mandate-item">Head of Product - FinTech</div>
+                    <div class="mandate-item">Chief Revenue Officer - SaaS Company</div>
+                    <div class="mandate-item">Director of Cybersecurity Digital Enterprise</div>
+                    <div class="mandate-item">Head of Data & Analytics - Retail Technology</div>
+                    <div class="mandate-item">Plant Director - Industrial Manufacturing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Edge / Partnerships Section -->
+    <section class="section-padding text-center">
+        <div class="container">
+            <h2>Why Leading Organizations Partner With Us</h2>
+            <div class="grid-3">
+                <div class="card"><h4>Partner-led Executive Search</h4></div>
+                <div class="card"><h4>Confidential & Discreet Engagements</h4></div>
+                <div class="card"><h4>Access to Passive Leadership Talent</h4></div>
+                <div class="card"><h4>Technology & Digital Leadership Specialists</h4></div>
+                <div class="card"><h4>Cross-Industry Executive Network</h4></div>
+                <div class="card"><h4>Research-Driven Talent Mapping</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action Panel -->
+    <section class="section-padding text-center" style="background: linear-gradient(rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); color: var(--white); border-top: 4px solid var(--brand-orange)">
+        <div class="container">
+            <h2 style="color: var(--white);">Build Your Leadership Team With Confidence</h2>
+            <p style="max-width: 700px; margin: 20px auto 30px; color: #cbd5e1;">Whether you're hiring your next CEO, CTO, VP Engineering, CFO, or functional leader, our executive search specialists are ready to help.</p>
+            <a href="#contact" class="btn">Let's discuss your leadership hiring needs</a>
+        </div>
+    </section>
+
+    <!-- Contact & Hub Information Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <h3 style="font-weight: 500; margin-top: 10px;">Better Yet, Connect With Your Recruitment Partner!</h3>
+                <p>We value our clients and partnerships. Whether you're seeking a tech recruitment agency, leadership hiring support, or niche GTM talent, our team is here to help—connect with us during business hours or reach out online anytime.</p>
+                
+                <div class="contact-details">
+                    <div><i class="fa-solid fa-location-dot"></i> <span>Aditya Consulting, Lucknow, India</span></div>
+                    <div><i class="fa-solid fa-phone"></i> <span>+91.9810844079</span></div>
+                    <div><i class="fa-solid fa-clock"></i> <span>Hours: Today Closed</span></div>
+                </div>
+            </div>
+            <div class="contact-info" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--white); padding: 40px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <h3>Instant Leadership Consultation</h3>
+                <p style="font-size: 15px; margin-bottom: 20px;">Skip long intake cycles. Connect directly via our secure secure chat routing option for immediate responses from our managing directors.</p>
+                <a href="https://wa.me/919971721199" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i> Message us on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standard Corporate Footer Accordance -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <div class="footer-logo">
+                    <img src="logo-asset.png" alt="aditya consulting" onerror="this.style.display='none';">
+                    <span style="font-weight:700; font-size: 18px; letter-spacing:0.5px; color: var(--white);">aditya consulting</span>
+                </div>
+                <p style="margin-top: 5px; font-size: 12px; color: #64748b;">Strategy • Consulting • Expert • Professional • Analysis • Solution</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/company/adityaconsulting/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #334155; font-size: 12px; display:flex; justify-content: space-between;">
+            <p>Copyright © 2006 Aditya Consulting. All Rights Reserved.</p>
+            <p>Powered by GoDaddy Airo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
